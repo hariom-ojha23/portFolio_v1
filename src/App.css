@@ -99,7 +99,9 @@ button {
   transition: height 1s;
 }
 
-/* About Component */
+/*
+ About Component 
+*/
 
 .container {
   height: 100vh;
@@ -197,6 +199,11 @@ button {
   border: 0;
   position: absolute;
   bottom: 10%;
+}
+
+#about button a {
+  text-decoration: none;
+  color: #fff;
 }
 
 #next {
