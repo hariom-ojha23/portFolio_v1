@@ -1,4 +1,14 @@
 import React, { Component } from 'react';
+import 
+{ 
+    FaFacebookF, 
+    FaLinkedinIn, 
+    FaTwitter, 
+    FaInstagram, 
+    FaGithub  
+} from "react-icons/fa";
+//import { AiOutlineRight } from "react-icons/ai";
+//import { Link } from 'react-router-dom';
 
 class About extends Component {
 
@@ -6,26 +16,43 @@ class About extends Component {
         super(props)
 
         this.state = {
-            text: "Hello, My Name is Hari om Ojha",
+            text: "Hello, my name is Hari om Ojha",
             currentText: '',
+            info: "                                I'm a computer science and engineering student. I'm a programmer, full stack developer, android app developer and hybrid app developer. I like to sketch portraits and listen music in my extra time.",
+            currentInfo: '',
             typingDelay: 50,
+            infoDelay: 30,
             charIndex: 0
         };
 
-        this.type = this.type.bind(this);
+        this.intro = this.intro.bind(this);
+        this.info = this.info.bind(this);
     }
 
     componentDidMount() {
-        this.type();
+        this.intro();
     }
 
-    type = () => {
+    intro = () => {
         if (this.state.charIndex <= this.state.text.length) {
             this.setState({
                 currentText: this.state.currentText + this.state.text.charAt(this.state.charIndex),
                 charIndex: this.state.charIndex + 1
             })
-            setTimeout(this.type, this.state.typingDelay);
+            setTimeout(this.intro, this.state.typingDelay);
+        }
+        else {
+            this.info();
+        }
+    }
+
+    info = () => {
+        if (this.state.charIndex <= this.state.info.length) {
+            this.setState({
+                currentInfo: this.state.currentInfo + this.state.info.charAt(this.state.charIndex),
+                charIndex: this.state.charIndex + 1
+            })
+            setTimeout(this.intro, this.state.infoDelay);
         }
     }
 
@@ -33,10 +60,21 @@ class About extends Component {
         return (
             <div className="container">
                 <div id="social" className="grid-item">
-                    <div>social</div>
+                    <ul>
+                        <li><span>Follow Me</span></li>
+                        <li><a href="https://www.facebook.com/hari.om.18659/" target="/blank" title="facebook"><FaFacebookF className="social-icons" /></a></li>
+                        <li><a href="https://github.com/hariom-ojha23" target="/blank" title="github"><FaGithub className="social-icons" /></a></li>
+                        <li><a href="https://www.linkedin.com/in/hari-om-ojha-0ba62419b" target="/blank" title="linkedin"><FaLinkedinIn className="social-icons" /></a></li>
+                        <li><a href="https://www.instagram.com/" target="/blank" title="instagram"><FaInstagram className="social-icons" /></a></li>
+                        <li><a href="https://twitter.com/HariomO67548076" target="/blank" title="twitter"><FaTwitter className="social-icons" /></a></li>
+                    </ul>
                 </div>
                 <div id="about" className="grid-item">
-                    <p className="typed">{this.state.currentText}</p>
+                    <p>{this.state.currentText}</p>
+                    <p>{this.state.currentInfo}</p>
+                    <button>
+                        DOWNLOAD CV
+                    </button>
                 </div>
                 <div id="next" className="grid-item">
                     <div>next</div>
