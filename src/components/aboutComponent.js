@@ -7,8 +7,8 @@ import
     FaInstagram, 
     FaGithub  
 } from "react-icons/fa";
-//import { AiOutlineRight } from "react-icons/ai";
-//import { Link } from 'react-router-dom';
+import { AiOutlineRight } from "react-icons/ai";
+import { Link } from 'react-router-dom';
 
 class About extends Component {
 
@@ -21,7 +21,7 @@ class About extends Component {
             info: "                                I'm a computer science and engineering student. I'm a programmer, full stack developer, android app developer and hybrid app developer. I like to sketch portraits and listen music in my extra time.",
             currentInfo: '',
             typingDelay: 50,
-            infoDelay: 30,
+            infoDelay: 20,
             charIndex: 0
         };
 
@@ -69,15 +69,15 @@ class About extends Component {
                         <li><a href="https://twitter.com/HariomO67548076" target="/blank" title="twitter"><FaTwitter className="social-icons" /></a></li>
                     </ul>
                 </div>
-                <div id="about" className="grid-item">
+                <div id="about" className="grid-item name">
                     <p>{this.state.currentText}</p>
                     <p>{this.state.currentInfo}</p>
                     <button>
                         <a href="" download="Resume" target="_blank">DOWNLOAD CV</a>
                     </button>
                 </div>
-                <div id="next" className="grid-item">
-                    <div>next</div>
+                <div className="grid-item next">
+                    <Link to="/skills" ><AiOutlineRight /></Link>
                 </div>
             </div>
         )

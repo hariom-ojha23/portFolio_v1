@@ -114,7 +114,7 @@ button {
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start !important;
 }
 
 #social {
@@ -143,15 +143,15 @@ button {
   font-family: sans-serif, monospace;
 }
 
-#social ul li:nth-child(2) { background-color: #4868ad; transition: width 0.3s ease; }
-#social ul li:nth-child(3) { background-color: #2f2f2f; transition: width 0.3s ease; }
-#social ul li:nth-child(4) { background-color: #2867B2; transition: width 0.3s ease; }
+#social ul li:nth-child(2) { background-color: #4868ad; transition: width 0.3s ; }
+#social ul li:nth-child(3) { background-color: #2f2f2f; transition: width 0.3s ; }
+#social ul li:nth-child(4) { background-color: #2867B2; transition: width 0.3s ; }
 #social ul li:nth-child(5) { background: 
   radial-gradient(circle at 25% 110%,#fdf497 0,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285aeb 90%), 
   radial-gradient(circle at 25% 110%,#b9a800 0,#938500 5%,#b10f00 45%,#8c0061 60%,#002ca9 90%);
-  transition: width 0.3s ease;
+  transition: width 0.3s ;
 }
-#social ul li:last-child { background-color: #1DA1F2; transition: width 0.3s ease; }
+#social ul li:last-child { background-color: #1DA1F2; transition: width 0.3s ; }
 
 #social ul li:nth-child(2):hover { width: 100px; }
 #social ul li:nth-child(3):hover { width: 100px; }
@@ -159,13 +159,19 @@ button {
 #social ul li:nth-child(5):hover { width: 100px; }
 #social ul li:last-child:hover { width: 100px; }
 
-#about {
+#about, .main {
   grid-column-start: 2;
   grid-column-end: 6;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
 }
 
 #about p {
@@ -193,7 +199,7 @@ button {
 #about button {
   font-size: 1rem;
   font-weight: 500;
-  padding: 1rem 1.5rem;
+  padding: 1rem 1.7rem;
   background-color: #b10f00;
   color: #fff;
   border: 0;
@@ -206,9 +212,96 @@ button {
   color: #fff;
 }
 
-#next {
+.next {
   grid-column-start: 6;
   grid-column-end: 7;
+}
+
+.main {
+  margin: 4em 0 0;
+}
+
+/* Skills Component */
+
+.skill-container {
+  min-height: 100vh;
+  height: 100% !important;
+}
+
+.back {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.skills {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+}
+
+.skills h1 {
+  color: #cacaca;
+  font-size: 2.5em;
+  margin: 15px 0 10px;
+}
+
+.bullets {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.bullets span {
+  color: #999;
+  background-color: #313131;
+  margin: 5px 3px;
+  padding: 0.5em 0.7em;
+  border: 1px solid #222;
+  box-shadow: 1px 1px rgb(0 0 0 / 25%);
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: .75em;
+  font-weight: 700;
+  line-height: 1em;
+}
+
+.content-item {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  height: 200px;
+  width: 200px;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgb(0 0 0 / 75%) inset;
+  /* box-shadow: 4px 4px 5px #331a00; */
+  border-radius: 10px;
+  margin: 20px;
+  padding: 10px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.all-container {
+  font-size: 1.5em;
+  color: #8a8a8a;
+  text-transform: lowercase;
+  margin-top: 1.5em;
+  text-align: start;
+}
+
+.skill-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 /* Contact Component */
@@ -352,6 +445,7 @@ input {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-top: 2em;
   }
   .social-icons {
     width: 50px;
@@ -370,7 +464,7 @@ input {
   }
 
   #about button {
-    bottom: 40%;
+    bottom: 35%;
   }
 
   .contactContainer {
@@ -380,5 +474,28 @@ input {
 
   .contactContainer .grid-item {
     display: none;
+  }
+
+  .back, .next {
+    display: none;
+  }
+
+  .skills h1 {
+    font-size: 2em;
+  }
+
+  .skills {
+    padding: 5px;
+  }
+
+  .card {
+    width: 140px;
+    height: 140px;
+    margin: 10px 8px;
+  }
+
+  .all-container {
+    margin-top: 1.3em;
+    font-size: 1.2em;
   }
 }

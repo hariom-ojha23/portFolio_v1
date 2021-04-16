@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { AiOutlineUser, AiOutlineMail } from "react-icons/ai"
 import { BsPencil } from "react-icons/bs";
 import { FiSend } from 'react-icons/fi';
@@ -11,9 +11,24 @@ import
 } from "react-icons/fa";
 
 const Contact = () => {
+
+    const [name, setName] = useState('');
+    const [mail, setMail] = useState('');
+    const [msg, setMsg] = useState('');
+
+    const sendMessage = () => {
+        console.log(name);
+        console.log(mail);
+        console.log(msg);
+
+        setName('');
+        setMail('');
+        setMsg('');
+    };
+
     return (
         <div className="contactContainer">
-            <div className="grid-item">
+            <div className="grid-item back">
                 <p>backbackbackback</p>
             </div>
             <div className="grid-item-form">
@@ -24,18 +39,18 @@ const Contact = () => {
                     <div id="form">
                         <div className="form-input">
                             <AiOutlineUser className="icon-contact" />
-                            <input type="text" placeholder="your name" />
+                            <input type="text" placeholder="your name" value={name} onChange={(e) => setName(e.target.value)} />
                         </div>
                         <div className="form-input">
                             <AiOutlineMail className="icon-contact" />
-                            <input type="email" placeholder="your email" />
+                            <input type="email" placeholder="your email" value={mail} onChange={(e) => setMail(e.target.value)} />
                         </div>
                         <div className="form-input">
                             <BsPencil className="icon-contact" />
-                            <input type="text" placeholder="your message" />
+                            <input type="text" placeholder="your message" value={msg} onChange={(e) => setMsg(e.target.value)} />
                         </div>
                     </div>
-                    <button>
+                    <button onClick={() => sendMessage()}>
                         <FiSend className="icon-contact" />
                         SEND
                     </button>
@@ -58,10 +73,10 @@ const Contact = () => {
                         </a>
 
                         <a href="https://github.com/hariom-ojha23" target="/blank" title="github">
-                        <button className="social">
-                            <FaGithub className="social-btn-icon"  />
-                            GITHUB
-                        </button>
+                            <button className="social">
+                                <FaGithub className="social-btn-icon"  />
+                                GITHUB
+                            </button>
                         </a>
 
                         <a href="https://www.instagram.com/" target="/blank" title="instagram">
