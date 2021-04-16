@@ -51,7 +51,7 @@ const Skills = () => {
     return (
         <div className="container skill-container">
             <div className="back grid-item">
-                <Link to="/" ><AiOutlineLeft /></Link>
+                <Link to="/" ><AiOutlineLeft className="back-icon" /></Link>
             </div>
             <div className="grid-item main">
                 <div class="skills">
@@ -66,13 +66,14 @@ const Skills = () => {
                         <span onClick={ () => clickHandler(5) } >database</span>
                         <span onClick={ () => clickHandler(6) } >development tools</span>
                     </div>
+                    <p>showing all skills. Use the filters to list them by technology</p>
                 </div>
                 <div class="contents">
                         {show}
                 </div>
             </div>
             <div className="grid-item next">
-            <Link to="/projects" ><AiOutlineRight /></Link>
+            <Link to="/projects" ><AiOutlineRight className="next-icon" /></Link>
             </div>
         </div>
     );

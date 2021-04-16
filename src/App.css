@@ -114,7 +114,7 @@ button {
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start !important;
+  justify-content: center;
 }
 
 #social {
@@ -215,6 +215,17 @@ button {
 .next {
   grid-column-start: 6;
   grid-column-end: 7;
+  position: fixed;
+  right: 100px;
+  top: 50%;
+}
+
+.back {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  position: fixed;
+  left: 100px;
+  top: 50%;
 }
 
 .main {
@@ -223,18 +234,21 @@ button {
 
 /* Skills Component */
 
-.skill-container {
-  min-height: 100vh;
-  height: 100% !important;
+.back-icon, .next-icon {
+  color: #999;
+  font-size: 5rem;
 }
 
-.back {
-  grid-column-start: 1;
-  grid-column-end: 2;
+.skill-container {
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start !important;
 }
 
 .skills {
-  max-width: 800px;
+  max-width: 750px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -246,6 +260,12 @@ button {
   color: #cacaca;
   font-size: 2.5em;
   margin: 15px 0 10px;
+}
+
+.skills p {
+  color: #999;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 .bullets {
@@ -277,8 +297,8 @@ button {
 }
 
 .card {
-  height: 200px;
-  width: 200px;
+  height: 170px;
+  width: 170px;
   background-color: #fff;
   box-shadow: 0 0 20px rgb(0 0 0 / 75%) inset;
   /* box-shadow: 4px 4px 5px #331a00; */
@@ -291,7 +311,7 @@ button {
 }
 
 .all-container {
-  font-size: 1.5em;
+  font-size: 1.3em;
   color: #8a8a8a;
   text-transform: lowercase;
   margin-top: 1.5em;
@@ -422,16 +442,31 @@ input {
 
 /* media */
 
+@media (max-width: 1000px) {
+  .next {
+    display: none;
+  }
+
+  .back {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .next {
+    right: 20px;
+  }
+  .back {
+    left: 20px;
+  }
+}
+
 @media (max-width: 720px) {
   .container {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
     justify-content: space-evenly;
-  }
-
-  #next {
-    display: none;
   }
 
   #social {
@@ -476,8 +511,10 @@ input {
     display: none;
   }
 
-  .back, .next {
-    display: none;
+  .skill-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start !important;
   }
 
   .skills h1 {

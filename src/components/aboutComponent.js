@@ -77,7 +77,7 @@ class About extends Component {
                     </button>
                 </div>
                 <div className="grid-item next">
-                    <Link to="/skills" ><AiOutlineRight /></Link>
+                    <Link to="/skills" ><AiOutlineRight className="next-icon" /></Link>
                 </div>
             </div>
         )
