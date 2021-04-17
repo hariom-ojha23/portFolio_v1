@@ -73,7 +73,7 @@ class About extends Component {
                     <p>{this.state.currentText}</p>
                     <p>{this.state.currentInfo}</p>
                     <button>
-                        <a href="" download="Resume" target="_blank">DOWNLOAD CV</a>
+                        <a href="" download="Resume" >DOWNLOAD CV</a>
                     </button>
                 </div>
                 <div className="grid-item next">

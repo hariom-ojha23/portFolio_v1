@@ -10,6 +10,9 @@ import
     FaGithub  
 } from "react-icons/fa";
 
+import { AiOutlineLeft } from "react-icons/ai";
+import { Link } from 'react-router-dom';
+
 const Contact = () => {
 
     const [name, setName] = useState('');
@@ -28,8 +31,8 @@ const Contact = () => {
 
     return (
         <div className="contactContainer">
-            <div className="grid-item back">
-                <p>backbackbackback</p>
+            <div className="back grid-item">
+                <Link to="/" ><AiOutlineLeft className="back-icon" /></Link>
             </div>
             <div className="grid-item-form">
                 <div>

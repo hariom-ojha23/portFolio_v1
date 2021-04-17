@@ -239,7 +239,7 @@ button {
   font-size: 5rem;
 }
 
-.skill-container {
+.skill-container, .project-container{
   min-height: 100vh;
   height: auto;
   display: flex;
@@ -247,13 +247,14 @@ button {
   justify-content: flex-start !important;
 }
 
-.skills {
-  max-width: 750px;
+.skills, .projects {
+  max-width: 850px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start !important;
   justify-content: flex-start !important;
+  padding: 10px;
 }
 
 .skills h1 {
@@ -290,7 +291,7 @@ button {
 }
 
 .content-item {
-  max-width: 800px;
+  max-width: 850px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -318,7 +319,42 @@ button {
   text-align: start;
 }
 
+.all-container h3 {
+  margin-left: 10px;
+}
+
 .skill-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* project Component */
+
+.projects h1 {
+  color: #cacaca;
+  font-size: 2.5em;
+  margin: 15px 0 10px;
+}
+
+.projects p {
+  color: #999;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.project-card {
+  height: 230px;
+  width: 370px;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgb(0 0 0 / 75%) inset;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-img {
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -348,6 +384,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-left: 4em;
 }
 
 .grid-item-form div:first-child h1 {
@@ -511,7 +548,7 @@ input {
     display: none;
   }
 
-  .skill-container {
+  .skill-container, .project-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-start !important;
@@ -531,8 +568,25 @@ input {
     margin: 10px 8px;
   }
 
+  .project-card {
+    width: 350px;
+    margin: 10px 0;
+  }
+
+  .main {
+    padding: 20px 0;
+  }
+
+  .content-item {
+    justify-content: center;
+  }
+
   .all-container {
     margin-top: 1.3em;
     font-size: 1.2em;
+  }
+
+  .grid-item-form {
+    padding: 0;
   }
 }

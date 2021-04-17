@@ -6,7 +6,7 @@ const Cloud = () => {
     return(
         <div className="content-item">
             <div className="card"> 
-                <img className="skill-img" src={heroku} />
+                <img className="skill-img" src={heroku} alt="heroku" title="heroku" />
             </div>
         </div>
     )

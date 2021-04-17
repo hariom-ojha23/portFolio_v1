@@ -11,19 +11,19 @@ const ProgrammingLanguages = () => {
     return(
         <div className="content-item">
             <div className="card"> 
-                <img className="skill-img" src={js} />
+                <img className="skill-img" src={js} alt="javascript" title="javascript" />
             </div>
             <div className="card"> 
-                <img className="skill-img" src={python} />
+                <img className="skill-img" src={python} alt="python" title="python" />
             </div>
             <div className="card"> 
-                <img className="skill-img" src={cpp} />
+                <img className="skill-img" src={cpp} alt="c++" title="c++" />
             </div>
             <div className="card"> 
-                <img className="skill-img" src={java} />
+                <img className="skill-img" src={java} alt="java" title="java" />
             </div>
             <div className="card"> 
-                <img className="skill-img" src={kotlin} />
+                <img className="skill-img" src={kotlin} alt="kotlin" title="kotlin" />
             </div>
         </div>
     )

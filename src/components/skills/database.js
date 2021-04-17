@@ -7,10 +7,10 @@ const Database = () => {
     return(
         <div className="content-item">
             <div className="card"> 
-                <img className="skill-img" src={mongo} />
+                <img className="skill-img" src={mongo} alt="mongoDB" title="mongoDB" />
             </div>
             <div className="card"> 
-                <img className="skill-img" src={sql} />
+                <img className="skill-img" src={sql} alt="mySQL" title="mySQL" />
             </div>
         </div>
     )

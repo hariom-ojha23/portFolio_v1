@@ -7,10 +7,10 @@ const Backend = () => {
     return(
         <div className="content-item">
             <div className="card">
-                <img className="skill-img" src={node} />
+                <img className="skill-img" src={node} alt="nodejs" title="nodejs" />
             </div>
             <div className="card">
-                <img className="skill-img" src={express} />
+                <img className="skill-img" src={express} alt="expressjs" title="expressjs" />
             </div>
         </div>
     )

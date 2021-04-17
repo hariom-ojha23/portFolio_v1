@@ -12,22 +12,22 @@ const Frontend = () => {
     return(
         <div className="content-item">
             <div className="card"> 
-                <img className="skill-img" src={react} />
+                <img className="skill-img" src={react} alt="reactjs" title="reactjs" />
             </div>
             <div className="card"> 
-                <img className="skill-img" src={html} />
+                <img className="skill-img" src={html} alt="html5" title="html5" />
             </div>
             <div className="card"> 
-                <img className="skill-img" src={css} />
+                <img className="skill-img" src={css} alt="css3" title="css3" />
             </div>
             <div className="card"> 
-                <img className="skill-img" src={bootstrap} />
+                <img className="skill-img" src={bootstrap} alt="bootstrap" title="bootstrap" />
             </div>
             <div className="card"> 
-                <img className="skill-img" src={sass} />
+                <img className="skill-img" src={sass} alt="sass" title="sass" />
             </div>
             <div className="card"> 
-                <img className="skill-img" src={jquery} />
+                <img className="skill-img" src={jquery} alt="jquery" title="jquery" />
             </div>
         </div>
     )
