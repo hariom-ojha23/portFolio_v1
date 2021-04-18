@@ -17,7 +17,7 @@ class About extends Component {
         super(props)
 
         this.state = {
-            text: "Hello, my name is Hari om Ojha",
+            text: " Hello, my name is Hari om Ojha",
             currentText: '',
             info: "                                I'm a computer science and engineering student. I'm a programmer, full stack developer, android app developer and hybrid app developer. I like to sketch portraits and listen music in my extra time.",
             currentInfo: '',
@@ -80,7 +80,7 @@ class About extends Component {
                     <p>{this.state.currentText}</p>
                     <p>{this.state.currentInfo}</p>
                     <button>
-                        <a href="" download="Resume" >DOWNLOAD CV</a>
+                        <a href="/" download="Resume" >DOWNLOAD CV</a>
                     </button>
                 </div>
                 <div className="grid-item next">
