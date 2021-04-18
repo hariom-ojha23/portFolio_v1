@@ -11,6 +11,12 @@ button {
 
 /* Navigation Component */
 
+.btnContainer {
+  height: 100vh;
+  width: 100%;
+  background-color: #2a2a2a;
+}
+
 #side-button {
   display: flex;
   position: fixed;
@@ -19,7 +25,10 @@ button {
   width: 45px;
   height: 35px;
   justify-content: space-around;
+  align-items: center;
   flex-direction: column;
+  z-index: 2;
+  cursor: pointer;
 }
 
 #side-button div {
@@ -34,13 +43,28 @@ button {
   transition: 1s transform;
 }
 
+.close-btn {
+  font-size: 4rem;
+  color: gray;
+}
+
+#close-btn-div {
+  position: absolute;
+  z-index: 2;
+  top: 5%;
+  right: 8%;
+  cursor: pointer;
+}
+
 .navContainer {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #2a2a2a;
+  position: relative;
 }
+
 .navContainer ul {
   list-style: none;
   text-align: center;
@@ -49,6 +73,7 @@ button {
   height: 100%;
   width: 100%;
   padding: 10px 0;
+  position: relative;
 }
 
 .navContainer ul li {
@@ -70,8 +95,9 @@ button {
   text-decoration: none;
 }
 
-.navContainer ul li a:active {
-  color: #9f9f9f;
+.navContainer li > .active {
+  color: #999;
+  font-weight: 600;
 }
 
 .navContainer ul li a:hover { color: #5a5a5a }
@@ -168,6 +194,19 @@ button {
   padding: 20px;
 }
 
+#about div:first-child {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 15%;
+}
+
+.myPhoto {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
 .name {
   display: flex;
   flex-direction: column;
@@ -181,7 +220,7 @@ button {
 
 }
 
-#about p:first-child {
+#about p:nth-child(2) {
   font-family: MontSerrat;
   font-size: 2rem;
   letter-spacing: -1.5px;
@@ -190,7 +229,7 @@ button {
   font-weight: 600;
 }
 
-#about p:nth-child(2) {
+#about p:nth-child(3) {
   font-family:  Lato,Helvetica,Arial,sans-serif;
   font-size: 1.2rem;
   color: #8a8a8a;
@@ -477,7 +516,42 @@ input {
   radial-gradient(circle at 25% 110%,#fdf497 0,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285aeb 90%), 
   radial-gradient(circle at 25% 110%,#b9a800 0,#938500 5%,#b10f00 45%,#8c0061 60%,#002ca9 90%); }
 
+
+
+/* page animation */
+
+.page-enter {
+  opacity: 1;
+  transform: translateX(-100%);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: all 400ms ease-in;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.page-exit-active {
+  opacity: 1;
+  transform: translateX(100%);
+  transition: all 1000ms ease-out;
+}
+
 /* media */
+
+@media (max-width: 1200px) {
+  .next {
+    right: 20px;
+  }
+  .back {
+    left: 20px;
+  }
+}
 
 @media (max-width: 1000px) {
   .next {
@@ -487,14 +561,9 @@ input {
   .back {
     display: none;
   }
-}
 
-@media (max-width: 1200px) {
-  .next {
-    right: 20px;
-  }
-  .back {
-    left: 20px;
+  .content-item {
+    justify-content: center;
   }
 }
 
@@ -510,6 +579,12 @@ input {
   width: 80%;
   margin: 20px auto;
   z-index: 2;
+  position: absolute;
+  bottom: 5%;
+  }
+
+  #about button {
+    bottom: 25%;
   }
 
   #social ul {
@@ -523,20 +598,20 @@ input {
     width: 50px;
   }
 
-  #about p:first-child {
+  #about div:first-child {
+    width: 8rem;
+  }
+
+  #about p:nth-child(2) {
     font-size: 20px;
     font-weight: 600;
     line-height: 1.7em;
   }
 
-  #about p:nth-child(2) {
+  #about p:nth-child(3) {
     font-size: 1em;
     font-weight: 400;
     line-height: 1.75em;
-  }
-
-  #about button {
-    bottom: 35%;
   }
 
   .contactContainer {
@@ -588,5 +663,63 @@ input {
 
   .grid-item-form {
     padding: 0;
+  }
+
+  #side-button {
+    background-color: #222;
+    padding: 15px;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    top: 4%;
+  }
+
+  #side-button div {
+    height: 2px;
+  }
+
+  #close-btn-div {
+    background-color: #222;
+    padding: 12px;
+    border-radius: 50%;
+    top: 3%;
+    right: 5%;
+  }
+
+  .close-btn {
+    font-size: 2.5rem;
+  }
+
+  .navContainer ul {
+    margin-top: 40px;
+  };
+}
+
+@media (max-width: 420px) {
+  #about div:first-child {
+    width: 10rem;
+  }
+}
+
+@media (max-width: 370px) {
+  #about div:first-child {
+    width: 8rem;
+  }
+}
+
+@media (max-width: 321px) {
+  #about div:first-child {
+    width: 7rem;
+    left: 25px;
+    top: 40px;
+  }
+
+  .projects {
+    padding: 10px;
+  }
+
+  .project-card {
+    width: 300px;
+    height: 200px
   }
 }

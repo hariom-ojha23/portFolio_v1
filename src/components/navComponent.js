@@ -8,14 +8,14 @@ const Navbar = () => {
     }
 
     return(
-        <>
+        <div classname="btnContainer">
             <Menu />
             <div id="side-button" onClick={() => toggle()}>
                 <div id="first"></div>
                 <div id="second"></div>
                 <div id="third"></div>
             </div>
-        </>
+        </div>
 );
 }
 

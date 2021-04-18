@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { AiOutlineClose } from "react-icons/ai";
 
 const Menu = () => {
 
@@ -11,15 +12,15 @@ const Menu = () => {
         <div id="topbar">
             <div className="navContainer">
                 <ul>
-                    <li><Link to="/" onClick={() => toggle()}>about</Link></li>
-                    <li><Link to="/skills" onClick={() => toggle()}>skills</Link></li>
-                    <li><Link to="/projects" onClick={() => toggle()}>projects</Link></li>
-                    <li><Link to="/achievements" onClick={() => toggle()}>achievements</Link></li>
-                    <li><Link to="/contact" onClick={() => toggle()}>contact</Link></li>
+                    <li><NavLink to="/" activeClassName="active" onClick={() => toggle()}>about</NavLink></li>
+                    <li><NavLink  to="/skills" activeClassName="active" onClick={() => toggle()}>skills</NavLink></li>
+                    <li><NavLink  to="/projects" activeClassName="active" onClick={() => toggle()}>projects</NavLink></li>
+                    <li><NavLink to="/achievements" activeClassName="active" onClick={() => toggle()}>achievements</NavLink></li>
+                    <li><NavLink to="/contact" activeClassName="active" onClick={() => toggle()}>contact</NavLink></li>
                 </ul>
-                <button onClick={() => toggle()}>
-                    close
-                </button>
+                <div id="close-btn-div" onClick={() => toggle()}>
+                    <AiOutlineClose className="close-btn" />
+                </div>
             </div>
         </div>
     );

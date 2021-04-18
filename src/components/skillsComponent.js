@@ -17,10 +17,6 @@ const Skills = () => {
     const clickHandler = (id) => {
         
         switch(id) {
-            case 0:
-                setShow(<ShowAll />);
-                break;
-
             case 1:
                 setShow(<Backend />);
                 break;
@@ -43,6 +39,10 @@ const Skills = () => {
             
             case 6:
                 setShow(<DevelopmentTools />);
+                break;
+
+            default:
+                setShow(<ShowAll />);
                 break;
         }
     }

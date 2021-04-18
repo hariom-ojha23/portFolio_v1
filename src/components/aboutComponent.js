@@ -9,6 +9,7 @@ import
 } from "react-icons/fa";
 import { AiOutlineRight } from "react-icons/ai";
 import { Link } from 'react-router-dom';
+import Hariom from '../images/hariom.png';
 
 class About extends Component {
 
@@ -27,6 +28,9 @@ class About extends Component {
 
         this.intro = this.intro.bind(this);
         this.info = this.info.bind(this);
+        // this.pageVariants = this.pageVariants.bind(this);
+        // this.pageTransition = this.pageTransition.bind(this);
+        // this.pageStyle = this.pageStyle.bind(this);
     }
 
     componentDidMount() {
@@ -70,6 +74,9 @@ class About extends Component {
                     </ul>
                 </div>
                 <div id="about" className="grid-item name">
+                    <div>
+                        <img className="myPhoto" src={Hariom} alt="Hari om Ojha" />
+                    </div>
                     <p>{this.state.currentText}</p>
                     <p>{this.state.currentInfo}</p>
                     <button>
