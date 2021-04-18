@@ -2,7 +2,7 @@ import React from 'react';
 import About from './aboutComponent';
 import Achievements from './achievementComponent';
 import Contact from './contactComponent';
-import Project from './project';
+import Project from './projectComponent';
 import Skills from './skillsComponent';
 import Navbar from './navComponent';
 import { Switch, Route, useLocation } from 'react-router-dom';

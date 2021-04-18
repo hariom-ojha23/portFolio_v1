@@ -341,7 +341,6 @@ button {
   width: 170px;
   background-color: #fff;
   box-shadow: 0 0 20px rgb(0 0 0 / 75%) inset;
-  /* box-shadow: 4px 4px 5px #331a00; */
   border-radius: 10px;
   margin: 20px;
   padding: 10px 5px;
@@ -391,12 +390,66 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .project-img {
   width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #5a5a5a;
+  opacity: 0.9;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+
+.project-card:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 80%;
+}
+
+.overlay-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.overlay-content .description {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.overlay-content button {
+  margin-top: 30px;
+  padding: 7px 12px;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 2px solid yellow;
+}
+
+.overlay-content button a {
+  color: yellow;
+  text-decoration: none;
 }
 
 /* Contact Component */
@@ -543,6 +596,12 @@ input {
 }
 
 /* media */
+
+@media (max-height: 800px) {
+  #about div:first-child {
+    width: 10rem;
+  }
+}
 
 @media (max-width: 1200px) {
   .next {
