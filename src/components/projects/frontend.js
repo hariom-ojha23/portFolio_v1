@@ -16,7 +16,7 @@ const Frontend = () => {
                                 quote from 8 categories and can share to your loved ones and friends.
                             </p>
                             <button>
-                                <a href="https://github.com/hariom-ojha23" target="_blank">github</a>
+                                <a href="https://github.com/hariom-ojha23/random-quote-machine" target="_blank">github</a>
                             </button>
                         </div>
                     </div>
@@ -33,7 +33,7 @@ const Frontend = () => {
                                 create post, follow and unfollow others and many more things.
                             </p>
                             <button>
-                                <a href="https://github.com/hariom-ojha23" target="_blank">github</a>
+                                <a href="https://github.com/hariom-ojha23/social-media-app-felix" target="_blank">github</a>
                             </button>
                         </div>
                     </div>
@@ -49,7 +49,7 @@ const Frontend = () => {
                                 the computed result.
                             </p>
                             <button>
-                                <a href="https://github.com/hariom-ojha23" target="_blank">github</a>
+                                <a href="https://github.com/hariom-ojha23/simple-calculator" target="_blank">github</a>
                             </button>
                         </div>
                     </div>

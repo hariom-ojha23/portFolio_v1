@@ -15,7 +15,7 @@ const Backend = () => {
                                 create post, follow and unfollow others and many more things.
                             </p>
                             <button>
-                                <a href="https://github.com/hariom-ojha23" target="_blank">github</a>
+                                <a href="https://github.com/hariom-ojha23/social-media-app-felix" target="_blank">github</a>
                             </button>
                         </div>
                     </div>

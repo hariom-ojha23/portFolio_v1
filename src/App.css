@@ -9,6 +9,10 @@ button {
   cursor: pointer;
 }
 
+#root {
+  background-color: #333;
+}
+
 /* Navigation Component */
 
 .btnContainer {
@@ -117,12 +121,21 @@ button {
 .navContainer ul li a:hover:after { background: #2d2d2d }
 
 #topbar {
-  position: fixed;
-  top: -100%;
+  position: absolute;
   width: 100%;
-  height: 0;
   z-index: 100;
-  transition: height 1s;
+}
+
+.isOpen {
+  top: 0;
+  height: 100vh;
+  transition: all 0.35s linear;
+}
+
+.isClose {
+  top: -100vh;
+  height: 0;
+  transition: all 0.2s linear;
 }
 
 /*
@@ -169,7 +182,7 @@ button {
   font-family: sans-serif, monospace;
 }
 
-#social ul li:nth-child(2) { background-color: #4868ad; transition: width 0.3s ; }
+#social ul li:nth-child(2) { background-color: #4868ad; transition: width 0.5s ; }
 #social ul li:nth-child(3) { background-color: #2f2f2f; transition: width 0.3s ; }
 #social ul li:nth-child(4) { background-color: #2867B2; transition: width 0.3s ; }
 #social ul li:nth-child(5) { background: 
@@ -352,13 +365,12 @@ button {
 .all-container {
   font-size: 1.3em;
   color: #8a8a8a;
-  text-transform: lowercase;
   margin-top: 1.5em;
-  text-align: start;
 }
 
 .all-container h3 {
   margin-left: 10px;
+  text-align: start;
 }
 
 .skill-img {
@@ -399,7 +411,7 @@ button {
   object-fit: cover;
 }
 
-.overlay {
+.project-card .overlay {
   position: absolute;
   bottom: 100%;
   left: 0;
@@ -450,6 +462,56 @@ button {
 .overlay-content button a {
   color: yellow;
   text-decoration: none;
+}
+
+/* Achievement Component */
+
+.achievement-card {
+  width: 250px;
+  height: 350px;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgb(0 0 0 / 75%) inset;
+  margin: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.achievement-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.achievement-card:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.achievement-card .overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #5a5a5a;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+
+.card-title {
+  width: 100%;
+  color: #2d2d2d;
+  font-weight: 600;
+  margin: auto;
+  font-size: 20px;
+}
+
+.star {
+  color: green;
+  font-size: 1.5em;
+  vertical-align: middle;
 }
 
 /* Contact Component */
@@ -757,6 +819,12 @@ input {
 @media (max-width: 420px) {
   #about div:first-child {
     width: 10rem;
+  }
+}
+
+@media (max-width: 390px) {
+  #about div:first-child {
+    width: 9rem;
   }
 }
 

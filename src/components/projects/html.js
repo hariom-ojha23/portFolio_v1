@@ -15,7 +15,7 @@ const Html = () => {
                                 such as about, contact, login and signup, home page etc. 
                             </p>
                             <button>
-                                <a href="https://github.com/hariom-ojha23" target="_blank">github</a>
+                                <a href="https://github.com/hariom-ojha23/Blog-webpage" target="_blank">github</a>
                             </button>
                         </div>
                     </div>
@@ -31,7 +31,7 @@ const Html = () => {
                                 color and start creating different arts.
                             </p>
                             <button>
-                                <a href="https://github.com/hariom-ojha23" target="_blank">github</a>
+                                <a href="https://github.com/hariom-ojha23/Pixel-art-maker-" target="_blank">github</a>
                             </button>
                         </div>
                     </div>

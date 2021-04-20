@@ -4,7 +4,15 @@ import Menu from './menuComponent';
 const Navbar = () => {
 
     const toggle = () => {
-        document.getElementById("topbar").style.cssText = "top: 0; height: 100vh; transition: height 0.7s;";
+        const el = document.getElementById("topbar")
+
+        if(el.classList.contains('isClose'))
+        {
+            el.classList.remove('isClose');
+            el.classList.add('isOpen');
+        }
+
+        // document.getElementById("topbar").style.cssText = "top: 0; height: 100vh; transition: height 0.7s;";
     }
 
     return(
