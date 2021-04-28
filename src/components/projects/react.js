@@ -17,7 +17,7 @@ const ReactJs = () => {
                                 quote from 8 categories and can share to your loved ones and friends.
                             </p>
                             <button>
-                                <a href="https://github.com/hariom-ojha23/random-quote-machine" target="_blank">github</a>
+                                <a rel="noreferrer" href="https://github.com/hariom-ojha23/random-quote-machine" target="_blank">github</a>
                             </button>
                         </div>
                     </div>
@@ -33,7 +33,7 @@ const ReactJs = () => {
                                 comment on it etc..
                             </p>
                             <button>
-                                <a href="https://github.com/hariom-ojha23/conFusion-React" target="_blank">github</a>
+                                <a rel="noreferrer" href="https://github.com/hariom-ojha23/conFusion-React" target="_blank">github</a>
                             </button>
                         </div>
                     </div>
@@ -50,7 +50,7 @@ const ReactJs = () => {
                                 create post, follow and unfollow others and many more things.
                             </p>
                             <button>
-                                <a href="https://github.com/hariom-ojha23/social-media-app-felix" target="_blank">github</a>
+                                <a rel="noreferrer" href="https://github.com/hariom-ojha23/social-media-app-felix" target="_blank">github</a>
                             </button>
                         </div>
                     </div>
@@ -66,7 +66,7 @@ const ReactJs = () => {
                                 the computed result.
                             </p>
                             <button>
-                                <a href="https://github.com/hariom-ojha23/simple-calculator" target="_blank">github</a>
+                                <a rel="noreferrer" href="https://github.com/hariom-ojha23/simple-calculator" target="_blank">github</a>
                             </button>
                         </div>
                     </div>

@@ -18,7 +18,7 @@ const Certificate = () => {
                             in developing single-page applications. We were introduced to the Flux architecture and Redux etc..
                             </p>
                             <button>
-                                <a href="https://www.coursera.org/account/accomplishments/certificate/GBX9L4T4WK2G" target="_blank">view Certificate</a>
+                                <a rel="noreferrer" href="https://www.coursera.org/account/accomplishments/certificate/GBX9L4T4WK2G" target="_blank">view Certificate</a>
                             </button>
                         </div>
                     </div>
@@ -37,7 +37,7 @@ const Certificate = () => {
                                 It provides a core set of platform agnostic native components like View, Text, and Image that map directly to the platform’s native UI building blocks.
                             </p>
                             <button>
-                                <a href="https://www.coursera.org/account/accomplishments/certificate/JGBVAWXY7BMK" target="_blank">View certificate</a>
+                                <a rel="noreferrer" href="https://www.coursera.org/account/accomplishments/certificate/JGBVAWXY7BMK" target="_blank">View certificate</a>
                             </button>
                         </div>
                     </div>
@@ -57,7 +57,7 @@ const Certificate = () => {
                             We also learn about CSS preprocessors, Less and Sass.
                             </p>
                             <button>
-                                <a href="https://www.coursera.org/account/accomplishments/certificate/DYG7UPXT6GMK" target="_blank">view certificate</a>
+                                <a rel="noreferrer" href="https://www.coursera.org/account/accomplishments/certificate/DYG7UPXT6GMK" target="_blank">view certificate</a>
                             </button>
                         </div>
                     </div>
@@ -77,7 +77,7 @@ const Certificate = () => {
                             all but the simplest mathematics.
                             </p>
                             <button>
-                                <a href="https://www.coursera.org/account/accomplishments/certificate/YQPK2JLWDKFL" target="_blank">View Certificate</a>
+                                <a rel="noreferrer" href="https://www.coursera.org/account/accomplishments/certificate/YQPK2JLWDKFL" target="_blank">View Certificate</a>
                             </button>
                         </div>
                     </div>

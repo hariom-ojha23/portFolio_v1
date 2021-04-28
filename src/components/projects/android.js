@@ -15,7 +15,7 @@ const Android = () => {
                                 your device. one can calculate tip and choose to round of the tip or not.
                             </p>
                             <button>
-                                <a href="https://github.com/hariom-ojha23/tip_calculator" target="_blank">github</a>
+                                <a rel="noreferrer" href="https://github.com/hariom-ojha23/tip_calculator" target="_blank">github</a>
                             </button>
                         </div>
                     </div>
@@ -31,7 +31,7 @@ const Android = () => {
                                 and then parse it into json to arrange data.
                             </p>
                             <button>
-                                <a href="https://github.com/hariom-ojha23/weather-app" target="_blank">github</a>
+                                <a rel="noreferrer" href="https://github.com/hariom-ojha23/weather-app" target="_blank">github</a>
                             </button>
                         </div>
                     </div>

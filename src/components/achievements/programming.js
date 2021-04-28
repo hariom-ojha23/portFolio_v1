@@ -20,7 +20,7 @@ const Programming = () => {
                             Objects and Types and Classes
                             </p>
                             <button>
-                                <a href="https://www.hackerrank.com/certificates/c70b5c0b9aea" target="_blank">View Certificate</a>
+                                <a rel="noreferrer" href="https://www.hackerrank.com/certificates/c70b5c0b9aea" target="_blank">View Certificate</a>
                             </button>
                         </div>
                     </div>
@@ -38,7 +38,7 @@ const Programming = () => {
                                 Achieved 5 star badge in python language at hackerrank
                             </p>
                             <button>
-                                <a href="https://www.hackerrank.com/Hari_om_Ojha" target="_blank">View Profile</a>
+                                <a rel="noreferrer" href="https://www.hackerrank.com/Hari_om_Ojha" target="_blank">View Profile</a>
                             </button>
                         </div>
                     </div>

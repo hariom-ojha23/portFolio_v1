@@ -121,9 +121,9 @@ button {
 .navContainer ul li a:hover:after { background: #2d2d2d }
 
 #topbar {
-  position: absolute;
+  position: fixed;
   width: 100%;
-  z-index: 100;
+  z-index: 3;
 }
 
 .isOpen {
@@ -819,6 +819,11 @@ input {
 @media (max-width: 420px) {
   #about div:first-child {
     width: 10rem;
+  }
+
+  .achievement-card {
+    width: 280px;
+    height: 380px;
   }
 }
 

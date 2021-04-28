@@ -15,7 +15,7 @@ const Programming = () => {
                                 and based on your decission the result of story will be decided.
                             </p>
                             <button>
-                                <a href="https://github.com/hariom-ojha23/text-based-adventure-game" target="_blank">github</a>
+                                <a rel="noreferrer" href="https://github.com/hariom-ojha23/text-based-adventure-game" target="_blank">github</a>
                             </button>
                         </div>
                     </div>
@@ -31,7 +31,7 @@ const Programming = () => {
                                 payment.
                             </p>
                             <button>
-                                <a href="https://github.com/hariom-ojha23" target="_blank">github</a>
+                                <a rel="noreferrer" href="https://github.com/hariom-ojha23" target="_blank">github</a>
                             </button>
                         </div>
                     </div>

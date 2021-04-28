@@ -11,9 +11,12 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 const Main = () => {
 
     const location = useLocation();
+
+    
     return (
+        <>
+        <Navbar />
         <div style={{overflow: "hidden"}}>
-            <Navbar />
             <TransitionGroup>
                 <CSSTransition key={location.key} classNames="page" timeout={600}>
                     <Switch>
@@ -26,6 +29,7 @@ const Main = () => {
                 </CSSTransition>
             </TransitionGroup>
         </div>
+        </>
     );
 }
 

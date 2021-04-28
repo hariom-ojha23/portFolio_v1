@@ -20,14 +20,21 @@ const Contact = () => {
     const [msg, setMsg] = useState('');
 
     const sendMessage = () => {
-        console.log(name);
-        console.log(mail);
-        console.log(msg);
-
-        setName('');
-        setMail('');
-        setMsg('');
+        if(ValidateEmail(mail)) {
+            setName('');
+            setMail('');
+            setMsg('');
+        }
     };
+
+    const ValidateEmail = (email) => {
+        if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email))
+        {
+            return (true)
+        }
+        alert("You have entered an invalid email address!")
+        return (false)
+    }
 
     return (
         <div className="contactContainer">

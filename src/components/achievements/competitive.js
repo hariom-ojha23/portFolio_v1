@@ -18,7 +18,7 @@ const Competitive = () => {
                                 Achieve 2 star at CodeChef in Competitive Programming in python and c++ language
                             </p>
                             <button>
-                                <a href="https://www.codechef.com/users/hari_om_ojha" target="_blank">view profile</a>
+                                <a rel="noreferrer" href="https://www.codechef.com/users/hari_om_ojha" target="_blank">view profile</a>
                             </button>
                         </div>
                     </div>

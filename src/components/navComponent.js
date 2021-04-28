@@ -16,7 +16,7 @@ const Navbar = () => {
     }
 
     return(
-        <div classname="btnContainer">
+        <div>
             <Menu />
             <div id="side-button" onClick={() => toggle()}>
                 <div id="first"></div>

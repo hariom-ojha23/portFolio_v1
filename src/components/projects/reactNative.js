@@ -14,7 +14,7 @@ const ReactNative = () => {
                                 and then parse it into json to arrange data.
                             </p>
                             <button>
-                                <a href="https://github.com/hariom-ojha23/weather-app" target="_blank">github</a>
+                                <a rel="noreferrer" href="https://github.com/hariom-ojha23/weather-app" target="_blank">github</a>
                             </button>
                         </div>
                     </div>
