@@ -20,20 +20,35 @@ const Contact = () => {
     const [msg, setMsg] = useState('');
 
     const sendMessage = () => {
-        if(ValidateEmail(mail)) {
+        if(Validate(name, mail, msg)) {
             setName('');
             setMail('');
             setMsg('');
         }
     };
 
-    const ValidateEmail = (email) => {
-        if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email))
+    const Validate = (name, email, msg) => {
+
+        const valid = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+
+        if (!valid.test(email))
         {
-            return (true)
+            alert("You have entered an invalid email address!");
+            return (false);
         }
-        alert("You have entered an invalid email address!")
-        return (false)
+        else if(name == '')
+        {
+            alert("Your name field is empty!");
+            return (false);
+        }
+        else if(msg == '')
+        {
+            alert("Your message field is empty!");
+            return (false);
+        }
+        else{
+            return(true);
+        }
     }
 
     return (
