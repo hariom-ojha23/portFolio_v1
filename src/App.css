@@ -571,19 +571,27 @@ button {
   margin-top: 3rem;
 }
 
-.grid-item-form div:first-child button {
+.grid-item-form div:first-child form button {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   padding: .6rem 1.5rem;
   background-color: rgb(0, 150, 136);
   border: none;
-  color: #fff;
   margin: 20px 3rem;
+  display: flex;
+  align-items: center;  
+  color: #fff;
+
 }
 
-.grid-item-form div:first-child button .icon-contact {
+.grid-item-form div:first-child form button input {
+
+}
+
+.grid-item-form div:first-child form button .icon-contact {
   color: #fff;
   font-size: 1.3rem !important;
+  vertical-align:;
 }
 
 .grid-item-form div:last-child h3 {
@@ -636,23 +644,23 @@ input {
 /* page animation */
 
 .page-enter {
-  opacity: 0.2;
+  opacity: 0;
   /* transform: translateX(-100%); */
 }
 
 .page-enter-active {
-  opacity: 0.8;
+  opacity: 0.6;
   /* transform: translateX(0%); */
-  transition: all 400ms ease-in;
+  transition: all 600ms ease-in;
 }
 
 .page-exit {
-  opacity: 1;
+  opacity: 0.6;
   /* transform: translateX(0%); */
 }
 
 .page-exit-active {
-  opacity: 0.2;
+  opacity: 0;
   /* transform: translateX(100%); */
   transition: all 1000ms ease-out;
 }

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 import { AiOutlineUser, AiOutlineMail } from "react-icons/ai"
 import { BsPencil } from "react-icons/bs";
 import { FiSend } from 'react-icons/fi';
@@ -19,13 +20,34 @@ const Contact = () => {
     const [mail, setMail] = useState('');
     const [msg, setMsg] = useState('');
 
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        if(sendMessage())
+        {
+            emailjs.sendForm('service_o26gbvl', 'template_fn9pjb2', e.target, 'user_IHYiFiTnYWqt4xz7z8U4G')
+            .then((result) => {
+                console.log(result.text);
+                alert("Message sent successfully !!  :)");
+            }, (error) => {
+                console.log(error.text);
+            });
+        }
+
+        resetField();
+    }
+
     const sendMessage = () => {
         if(Validate(name, mail, msg)) {
-            setName('');
-            setMail('');
-            setMsg('');
+            return true;
         }
     };
+
+    const resetField = () => {
+        setName('');
+        setMail('');
+        setMsg('');
+    }
 
     const Validate = (name, email, msg) => {
 
@@ -36,12 +58,12 @@ const Contact = () => {
             alert("You have entered an invalid email address!");
             return (false);
         }
-        else if(name == '')
+        else if(name === '')
         {
             alert("Your name field is empty!");
             return (false);
         }
-        else if(msg == '')
+        else if(msg === '')
         {
             alert("Your message field is empty!");
             return (false);
@@ -61,24 +83,25 @@ const Contact = () => {
                     <h1>Get in touch</h1>
                     <p>if you wanna get in touch, talk to me about a project collaboration or just say hi,</p>
                     <p>fill up the form below or send an email to <a className="mail" href="mailto:hari.om.18659@gmail.com" title="Hari om Ojha">hari.om.18659@gmail.com</a> and ~let's talk</p>
-                    <div id="form">
+                    <form id="form" onSubmit={sendEmail}>
                         <div className="form-input">
                             <AiOutlineUser className="icon-contact" />
-                            <input type="text" placeholder="your name" value={name} onChange={(e) => setName(e.target.value)} />
+                            <input type="text" placeholder="your name" value={name} onChange={(e) => setName(e.target.value)} name="name" />
                         </div>
                         <div className="form-input">
                             <AiOutlineMail className="icon-contact" />
-                            <input type="email" placeholder="your email" value={mail} onChange={(e) => setMail(e.target.value)} />
+                            <input type="email" placeholder="your email" value={mail} onChange={(e) => setMail(e.target.value)} name="email" />
                         </div>
                         <div className="form-input">
                             <BsPencil className="icon-contact" />
-                            <input type="text" placeholder="your message" value={msg} onChange={(e) => setMsg(e.target.value)} />
+                            <input type="text" placeholder="your message" value={msg} onChange={(e) => setMsg(e.target.value)} name="message" />
                         </div>
-                    </div>
-                    <button onClick={() => sendMessage()}>
-                        <FiSend className="icon-contact" />
-                        SEND
-                    </button>
+                        <button type="submit">
+                            <FiSend className="icon-contact" />
+                            SEND
+                        </button>
+                    </form>
+                    
                 </div>
                 <div>
                     <h3>Let's get social</h3>
