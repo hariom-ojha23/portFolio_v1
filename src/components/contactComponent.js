@@ -32,9 +32,9 @@ const Contact = () => {
             }, (error) => {
                 console.log(error.text);
             });
-        }
 
-        resetField();
+            resetField();
+        }
     }
 
     const sendMessage = () => {
