@@ -94,7 +94,7 @@ const Contact = () => {
                         </div>
                         <div className="form-input">
                             <BsPencil className="msg-contact" />
-                            <textarea rows="3" type="text" placeholder="your message" value={msg} onChange={(e) => setMsg(e.target.value)} name="message" />
+                            <textarea rows="4" type="text" placeholder="your message" value={msg} onChange={(e) => setMsg(e.target.value)} name="message" />
                         </div>
                         <button type="submit">
                             <FiSend className="icon-contact" />

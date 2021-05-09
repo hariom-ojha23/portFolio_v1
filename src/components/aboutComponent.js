@@ -10,6 +10,7 @@ import
 import { AiOutlineRight } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 import Hariom from '../images/hariom.png';
+import resume from '../res/resume.pdf';
 
 class About extends Component {
 
@@ -80,7 +81,7 @@ class About extends Component {
                     <p>{this.state.currentText}</p>
                     <p>{this.state.currentInfo}</p>
                     <button>
-                        <a href="/" download="Resume" >DOWNLOAD CV</a>
+                        <a href={resume} download="Resume" >DOWNLOAD CV</a>
                     </button>
                 </div>
                 <div className="grid-item next">

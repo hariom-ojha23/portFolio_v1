@@ -18,13 +18,13 @@ const Main = () => {
         <Navbar />
         <div style={{overflow: "hidden"}}>
             <TransitionGroup>
-                <CSSTransition key={location.key} classNames="page" timeout={600}>
-                    <Switch>
-                        <Route exact path="/"><About /></Route>
-                        <Route path="/achievements"><Achievements /></Route>
-                        <Route path="/projects"><Project /></Route>
-                        <Route path="/skills"><Skills /></Route>
-                        <Route path="/contact"><Contact /></Route>
+                <CSSTransition key={location.key} classNames="page" timeout={500}>
+                    <Switch location={location}> 
+                        <Route exact path="/" component={About} />
+                        <Route path="/achievements" component={Achievements} />
+                        <Route path="/projects" component={Project} />
+                        <Route path="/skills" component={Skills} />
+                        <Route path="/contact" component={Contact} />
                     </Switch>
                 </CSSTransition>
             </TransitionGroup>
